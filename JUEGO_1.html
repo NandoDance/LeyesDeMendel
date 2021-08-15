@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Agency - Start Bootstrap Theme</title>
+        <link rel="icon" type="image/x-icon" href="../HAHAHA/startbootstrap-agency-gh-pages/assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" type="text/css" />
+        <link href="js/scripts.js" rel="stylesheet" type="text/js">
+    </head>
+    <body id="page-top" 
+    style="
+    background-image: url(assets/img/fondomedieval.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;  
+    background-attachment: fixed;    
+    background-size: cover;   
+    background-color: transparent;">
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+      <div class="container">
+          <a class="navbar-brand js-scroll-trigger" href="index.html"><img src="../HAHAHA/startbootstrap-agency-gh-pages/assets/img/navbar-logo.svg" alt="" /></a>
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+              Menu
+              <i class="fas fa-bars ml-1"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+              <ul class="navbar-nav text-uppercase ml-auto">
+                  <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html">INICIO</a></li>
+              </ul>
+          </div>
+    </div>
+  </nav>
+ 
+  <div class="row justify-content-center" style="margin-top: 90px;">
+      <div class="col-lg-8">
+              <!-- Project Details Go Here-->
+              <h2>
+                  Primera pregunta    
+              </h2>
+              <p>
+                Se cruza un gato color negro (dominante) con una gata de color blanco, razónese el cruzamiento y responda ¿cuál será el fenotipo y el genotipo de la descendencia obtenida?
+              </p>
+              <div style="text-align: center;">
+                <img alt="imagen html de ejemplo" src="assets/img/caballos.png" width="50%"  />
+              </div>
+              <div style="text-align:left; margin-top: 20px;">
+                <form name="ejercicios1A" style="margin-right: 100px;">
+                  <input type="radio"  id="R1B" name="R1A" onclick="answer()">
+                  <label> Fenotipo: 100% de color blanco; Genotipo: 100% heterocigotos (Bb)</label>
+                  <img id="R1BI" alt="imagen html de ejemplo" src="assets/img/error.png"  width="30" height="25" style="display: none;"/><br>
+      
+                  <input type="radio"id="R1C" name="R1A" onclick="answer()">
+                  <label> Fenotipo: 50% de color negro; Genotipo: 50% homocigotos (BB)</label>
+                  <img id="R1CI" alt="imagen html de ejemplo" src="assets/img/error.png"  width="30" height="25" style="display: none;"/><br>
+
+                  <input type="radio" id="R1A" name="R1A" onclick="answer()">
+                  <label>Fenotipo: 100% de color negro; Genotipo: 100% heterocigotos (Bb)</label>
+                  <img id="R1AI" alt="imagen html de ejemplo" src="assets/img/check.png"  width="30" height="25" style="display: none;"/><br>
+
+                  <input type="radio" id="R1D" name="R1A" onclick="answer()">
+                  <label>Fenotipo: 50% de color blanco; Genotipo: 50% homocigotos (bb)</label>
+                  <img id="R1DI" alt="imagen html de ejemplo" src="assets/img/error.png"  width="30" height="25" style="display: none;"/>
+              </form>
+              </div>
+              <div class="btnjuegoinfo" style="text-align: left; margin-top: 20px; float: left;">
+                    <img alt="imagen html de ejemplo" src="assets/img/botoninfo.png" width="80'" height="80" onclick="btnmodal()"/>
+            </div>
+              <div class="btnjuegonext" style="text-align: right; margin-top: 20px;">
+                  <a href="JUEGO_2.html" >
+                      <img alt="imagen html de ejemplo" src="assets/img/botonnext.png" width="200" height="80" />
+                  </a>
+              </div>
+      </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="container">
+                <div class="row justify-content-center">
+                  <div class="modal-body">
+                    <h2 class="text-uppercase" style="text-align: center;">Solución</h2>
+                    <img src="assets/img/RESPUESTA1.png" alt="" width="700" height="600" class="img-fluid d-block mx-auto" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+  //Modal
+  function btnmodal(){
+    $('#modal').modal('show');}
+
+  //Respuestas
+  function answer(){
+  var R1B = document.getElementById("R1B");
+  var w = document.getElementById("R1BI");
+  var R1A = document.getElementById("R1A");
+  var x = document.getElementById("R1AI");
+  var R1C = document.getElementById("R1C");
+  var y = document.getElementById("R1CI");
+  var R1D = document.getElementById("R1D");
+  var z = document.getElementById("R1DI");
+
+  if(R1B.checked){
+    w.style.display = "";}
+  else
+    w.style.display = "none";
+
+  if(R1A.checked){
+    x.style.display = "";}
+  else
+    x.style.display = "none";
+
+  if(R1C.checked){
+    y.style.display = "";}
+  else
+    y.style.display = "none";
+
+  if(R1D.checked){
+    z.style.display = "";}
+  else
+    z.style.display = "none";
+  }
+</script>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Third party plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <!-- Contact form JS-->
+    <script src="../HAHAHA/startbootstrap-agency-gh-pages/assets/mail/jqBootstrapValidation.js"></script>
+    <script src="../HAHAHA/startbootstrap-agency-gh-pages/assets/mail/contact_me.js"></script>
+    <!-- Core theme JS-->
+    <script src="../HAHAHA/startbootstrap-agency-gh-pages/js/scripts.js"></script>
+</html>
